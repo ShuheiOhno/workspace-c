@@ -8,4 +8,5 @@ int main(void){
     printf("b:"); scanf("%d", &b);
 
     printf("aはbの%f%%\n", (double)a / b * 100);
+    return 0;
 }

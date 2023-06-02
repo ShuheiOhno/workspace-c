@@ -7,4 +7,5 @@ int main(void){
     printf("実数b:"); scanf("%lf", &b);
 
     printf("aはbの%f%%です", a / b * 100);
+    return 0;
 }

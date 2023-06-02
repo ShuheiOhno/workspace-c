@@ -10,5 +10,5 @@ int main(void){
     printf("高さ"); scanf("%d", &height);
 
     printf("面積:%lf", (double)(a + b) * height /2);
-
+    return 0;
 }
