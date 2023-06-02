@@ -12,6 +12,7 @@ int main(void){
         break;
     case 1:
         printf("奇数");
+        break;
     default:
         break;
     }
