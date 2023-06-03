@@ -14,7 +14,7 @@ int days_of_month(int y, int m){
     return mdays[is_leap(y)][m - 1];
 }
 
-//y年m月d日を前日以前の日付に更新
+//y年m月d日を前日の日付に更新
 void decrement_date(int *y, int *m, int *d){
     if(*d > 1){
         --*d;
@@ -27,7 +27,7 @@ void decrement_date(int *y, int *m, int *d){
     }
 }
 
-//y年m月d日を翌日以降の日付に更新
+//y年m月d日を翌日の日付に更新
 void increment_date(int *y, int *m, int *d){
     if(*d < days_of_month(*y, *m)){
         ++*d;
