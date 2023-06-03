@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main(void){
-    char a[][5] = {"LISP", "C", "Ada"};
+    char a[][5] = {"LISP",
+                    "C",
+                    "Ada"}; //a[2][1] = d
     char *p[] = {"PAUL", "X", "MAC"};
     for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++){
         printf("a[%d] = \"%s\"\n", i, a[i]);
