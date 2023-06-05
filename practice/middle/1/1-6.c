@@ -7,6 +7,9 @@ int main(void){
     int ans = rand() % 1000; //0〜999の乱数を生成
     int no;
 
+    // 当てさせる数を３けたの整数にする
+    // int ans = 100 + rand() % 900;
+
     printf("数字を当てよう\n");
     do {
         printf("いくつでしょう");
