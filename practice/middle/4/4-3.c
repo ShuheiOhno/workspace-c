@@ -8,3 +8,4 @@ int main(void) {
     printf("%dと入力しましたね\n", atoi(temp)); //atoi 文字列をint型に変換
     return 0;
 }
+
