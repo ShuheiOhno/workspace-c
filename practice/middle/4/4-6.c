@@ -66,9 +66,45 @@ void print_result(int snum, int spos){
 
 int main(void){
     srand(time(NULL));
-    puts("");
-    puts("");
-    puts("");
-    puts("");
-    puts("");
+    puts("マスターマインドをしよう");
+    puts("当てるのは４個の数字の並びです");
+    puts("同じ数字が複数含まれることはありません");
+    puts("4307のように連続して入力してください");
+    puts("スペース文字などを入力してはいけません");
+
+    int no[4]; //コンピュータが作成する数
+    make4digits(no);
+
+    int hit;
+    int blow;
+    int try_no = 0; //入力回数
+
+    time_t start = time(NULL); //開始時刻
+
+    do {
+        int chk;
+        char buff[10];
+        do {
+            printf("入力してください: ");
+            scanf("%s", buff);
+
+            chk = check(buff);
+            switch(chk){
+                case 1: puts("4文字で入力してください");
+                case 2: puts("数字以外の文字を入力しないでください");
+                case 3: puts("同一の数字を複数入力しないでください");
+            }
+        } while (chk != 0);
+
+        try_no++;
+        judge(buff, no, &hit, &blow);
+        print_result(hit + blow, hit);
+    } while (hit < 4);
+
+    time_t end = time(NULL);
+
+    printf("%d回かかりました。\n所要時間は%.1f秒でした\n",
+                            try_no, difftime(end, start));
+    
+    return 0;
 }
