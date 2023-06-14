@@ -25,7 +25,7 @@ int check(const char s[]){
     for (int i = 0; i < 4; i++){
         if(!isdigit(s[i]))
             return 2;
-        for (int j = 0; j < 4; j++)
+        for (int j = 0; j < i; j++)
             if (s[i] == s[j])
                 return 3;
     }
@@ -55,7 +55,7 @@ void print_result(int snum, int spos){
     else if (snum == 0)
         printf("それらの数字は全く含まれません");
     else {
-        printf("それらの数字中%d個の数字が含まれますn", snum);
+        printf("それらの数字中%d個の数字が含まれます\n", snum);
         if(spos == 0)
             printf("ただし位置も合っている数字はありません\n");
         else
