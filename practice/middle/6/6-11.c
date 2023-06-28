@@ -33,6 +33,7 @@ void put_calender(int y, int m){
     printf(" 日 月 火 水 木 金 土 \n");
     printf("--------------------\n");
 
+    //%*sは空白文字
     printf("%*s", 3 * wd, ""); //1日より左側のスペースを表示
 
     for (int i = 1; i <= mdays; i++){
