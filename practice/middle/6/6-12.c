@@ -26,3 +26,12 @@ int monthdays(int year, int month){
         return mday[month]; //monthが2月でない時
     return mday[month] + is_leap(year); //monthが2月である時
 }
+
+//y年m月のカレンダーを2次元配列sに格納
+void make_calendar(int y, int m, char s[7][22]){
+    int wd = dayofweek(y, m, 1); //y年m月1日の曜日
+    int mdays = monthdays(y, m); //y年m月の日数
+    char tmp[4];
+
+    sprintf(s[0], "%10d / %02d      ", y, m); //タイトル
+}
