@@ -64,6 +64,15 @@ int main() {
 
             DrawScreen();
 
+            // 当たり判定
+            if((ballY == paddleY - 1) && (ballX >= paddleX -1) && (ballX < paddleX + PADDLE_WIDTH + 1)){
+                if(ballX < paddleX + PADDLE_WIDTH / 2)
+                    ballVelocityX = -1;
+                else
+                    ballVelocityX = 1;
+                ballVelocityY = -1;
+            }
+
             lastClock = nowClock; 
         }
 
