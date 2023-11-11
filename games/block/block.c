@@ -9,11 +9,15 @@
 #define FPS (10) //１秒間に何回描画するか
 #define INTERVAL (1000 / FPS)    //ミリ秒 1000は1秒
 
-int ballX;
-int ballY;
+#define PADDLE_WIDTH (4)
 
-int ballVelocityX = 1;
+int ballX; //ボールのx座標
+int ballY; //ボールのy座標（下が+）
+int ballVelocityX = 1; //ボールをどの方向に動かすか（速度）
 int ballVelocityY = 1;
+
+int paddleX = (FIELD_WIDTH - PADDLE_WIDTH) /2;
+int paddleY = FIELD_HEIGHT - 3;
 
 int main() {
     clock_t lastClock = clock();
@@ -29,6 +33,11 @@ int main() {
             if(ballX >= FIELD_WIDTH -1)
                 ballVelocityX = -1;
 
+            if(ballY <= 0)
+                ballVelocityY = 1; 
+            if(ballY >= FIELD_HEIGHT)
+                ballVelocityY = -1; //上の壁に当たるまで、描画されるごとに座標が-1される(上方向に移動)
+
             system("cls");
             for (int i = 0; i < FIELD_WIDTH + 2; i++)
                 printf("a"); //上の壁
@@ -38,7 +47,9 @@ int main() {
                 printf("a");
                 for(int x = 0; x < FIELD_WIDTH; x++){
                     if((y==ballY) && (x==ballX))
-                        printf("D"); //ボール
+                        printf("o"); //ボール
+                    else if ((y==paddleY) && (x>=paddleX) && (x < paddleX+PADDLE_WIDTH))
+                        printf("T"); //パドル
                     else
                         printf(" ");
                 }
