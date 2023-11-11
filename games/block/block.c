@@ -19,25 +19,7 @@ int ballVelocityY = 1;
 int paddleX = (FIELD_WIDTH - PADDLE_WIDTH) /2;
 int paddleY = FIELD_HEIGHT - 3;
 
-int main() {
-    clock_t lastClock = clock();
-    while (1) {
-        clock_t nowClock = clock();
-        if(nowClock >= lastClock + INTERVAL){ //lastClockからINTERVAL時間が経過した
-            ballX += ballVelocityX;
-            ballY += ballVelocityY;
-
-            //壁に当たったら跳ね返る
-            if(ballX <= 0)
-                ballVelocityX = 1;
-            if(ballX >= FIELD_WIDTH -1)
-                ballVelocityX = -1;
-
-            if(ballY <= 0)
-                ballVelocityY = 1; 
-            if(ballY >= FIELD_HEIGHT)
-                ballVelocityY = -1; //上の壁に当たるまで、描画されるごとに座標が-1される(上方向に移動)
-
+void DrawScreen() {
             system("cls");
             for (int i = 0; i < FIELD_WIDTH + 2; i++)
                 printf("a"); //上の壁
@@ -59,6 +41,28 @@ int main() {
 
             for(int i = 0; i < FIELD_WIDTH + 2; i++)
                 printf("a");  //下の壁
+}
+
+int main() {
+    clock_t lastClock = clock();
+    while (1) {
+        clock_t nowClock = clock();
+        if(nowClock >= lastClock + INTERVAL){ //lastClockからINTERVAL時間が経過した
+            ballX += ballVelocityX;
+            ballY += ballVelocityY;
+
+            //壁に当たったら跳ね返る
+            if(ballX <= 0)
+                ballVelocityX = 1;
+            if(ballX >= FIELD_WIDTH -1)
+                ballVelocityX = -1;
+
+            if(ballY <= 0)
+                ballVelocityY = 1; 
+            if(ballY >= FIELD_HEIGHT)
+                ballVelocityY = -1; //上の壁に当たるまで、描画されるごとに座標が-1される(上方向に移動)
+
+            DrawScreen();
 
             lastClock = nowClock; 
         }
