@@ -66,6 +66,17 @@ int main() {
 
             lastClock = nowClock; 
         }
+
+        //パドルの移動
+        if(_kbhit()){
+            switch(getch()) {
+                case 'a': paddleX--; break;
+                case 'd': paddleX++; break;
+            }
+            if(paddleX < 0) paddleX = 0;
+            if(paddleX >= FIELD_WIDTH - PADDLE_WIDTH) paddleX = FIELD_WIDTH - PADDLE_WIDTH;
+            DrawScreen();
+        }
     }
     
     _getch();
