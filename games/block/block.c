@@ -16,8 +16,11 @@ int ballY; //ボールのy座標（下が+）
 int ballVelocityX = 1; //ボールをどの方向に動かすか（速度）
 int ballVelocityY = 1;
 
-int paddleX = (FIELD_WIDTH - PADDLE_WIDTH) /2;
-int paddleY = FIELD_HEIGHT - 3;
+int paddleX;
+int paddleY;
+
+
+int field[FIELD_HEIGHT][FIELD_WIDTH];
 
 void DrawScreen() {
             system("cls");
@@ -32,6 +35,8 @@ void DrawScreen() {
                         printf("o"); //ボール
                     else if ((y==paddleY) && (x>=paddleX) && (x < paddleX+PADDLE_WIDTH))
                         printf("T"); //パドル
+                    else if (field[y][x])
+                        printf("*"); //ブロック
                     else
                         printf(" ");
                 }
@@ -43,7 +48,28 @@ void DrawScreen() {
                 printf("a");  //下の壁
 }
 
+void Reset() {
+    ballX = rand() % FIELD_WIDTH;
+    ballY = FIELD_HEIGHT / 3;
+
+
+    ballVelocityX = (rand()%2) ? 1 : -1;
+    ballVelocityY = 1;
+
+    paddleX = (FIELD_WIDTH - PADDLE_WIDTH) /2;
+    paddleY = FIELD_HEIGHT - 3;
+
+    for(int y=0; y < FIELD_WIDTH; y++)
+        for(int x = 0; x < FIELD_HEIGHT; x++)
+            field[y][x] = 1;
+    DrawScreen();
+}
+
 int main() {
+    srand((unsigned int)time(NULL));
+
+
+    Reset();
     clock_t lastClock = clock();
     while (1) {
         clock_t nowClock = clock();
@@ -62,7 +88,7 @@ int main() {
             if(ballY >= FIELD_HEIGHT)
                 ballVelocityY = -1; //上の壁に当たるまで、描画されるごとに座標が-1される(上方向に移動)
 
-            DrawScreen();
+            
 
             // 当たり判定
             if((ballY == paddleY - 1) && (ballX >= paddleX -1) && (ballX < paddleX + PADDLE_WIDTH + 1)){
@@ -70,10 +96,29 @@ int main() {
                     ballVelocityX = -1;
                 else
                     ballVelocityX = 1;
+
                 ballVelocityY = -1;
             }
 
+            for (int x = ballX - 1; x <= ballX + 1; x++) {
+                int y = ballY - 1;
+                if((y < 0) || (x < 0) || (x >= FIELD_WIDTH))
+                    continue;
+
+                if(field[y][x]) {
+                    field[y][x] = 0;
+                    ballVelocityY = 1;
+                }
+            }
+
+
+            DrawScreen();
+
             lastClock = nowClock; 
+            
+            if(ballY >= FIELD_HEIGHT - 1) {
+                Reset();
+            }
         }
 
         //パドルの移動
