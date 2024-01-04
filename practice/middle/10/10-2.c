@@ -75,6 +75,14 @@ int main(void) {
             scanf("%d", &no);
             if(no != na)
                 puts("\a違います");
-        }
-    }
+        } while(no != na);
+        puts("正解です");
+
+        pq = nq;
+
+        printf("もう一度？ 0-いいえ/1-はい：");
+        scanf("%d", &retry);
+    } while(retry == 1);
+
+    return 0;
 }
