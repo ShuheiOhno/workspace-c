@@ -1,3 +1,5 @@
+//文字列を動的に確保
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,6 +19,6 @@ int main(void){
         printf("ptr = %s\n", ptr);
         free(ptr); //記憶域を解放
     }
-    
+
     return 0;
 }
