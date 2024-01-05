@@ -14,7 +14,8 @@ int main(void) {
         puts("記憶域の確保に失敗しました");
     else {
         for(int i = 0; i < num; i++)
-            p[i] = NULL;
+            p[i] = NULL; //空ポインタの代入
+            
         for(int i = 0; i < num; i++) {
             char tmp[128];
             printf("p[%d]:",i);
