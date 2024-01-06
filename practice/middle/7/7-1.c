@@ -8,7 +8,7 @@ int main(void){
         a[i] = dgt[i];
 
     for (int i = 0; i < 9; i++)
-        printf("%d", a[i]);
+        printf("%d ", a[i]);
 
     putchar('\n');
 
