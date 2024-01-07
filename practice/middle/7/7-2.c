@@ -13,8 +13,13 @@ int main(void){
 
     int i = 0, j = 0;
     while(i < 9) {
-        if(i != x)
+        if(i != x){
+            printf("@@@@@@@@@@@@\n");
+            printf("before j = %d\n",j);
             a[j++] = dgt[i];
+            printf("after j = %d\n",j);
+            printf("@@@@@@@@@@@@\n");
+        }
         i++;
     }
     for (int i = 0; i < 8; i++)
