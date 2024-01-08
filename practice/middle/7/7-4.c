@@ -23,11 +23,11 @@ int main(void){
             i++;
         }
 
-    for (int i = 7; i > 0; i--){ //配列aをシャッフル
-        int j = rand() % (i + 1);
-        if (i != j)
-            swap(int, a[i], a[j]);
-    }
+        for (int i = 7; i > 0; i--){ //配列aをシャッフル
+            int j = rand() % (i + 1);
+            if (i != j)
+                swap(int, a[i], a[j]);
+        }
 
         for (int i = 0; i < 8; i++)
             printf("%d", a[i]);
