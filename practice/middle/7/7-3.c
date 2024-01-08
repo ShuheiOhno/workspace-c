@@ -30,6 +30,17 @@ int main(void){
             scanf("%d", &no);
         } while (no != dgt[x]);
     }
+    time_t end = time(NULL);
+    double jikan = difftime(end, start);
+    printf(".1f秒かかりました\n", jikan);
+    if (jikan > 25.0)
+        printf("遅い\n");
+    else if (jikan > 20.0)
+        printf("少し遅い\n");
+    else if (jikan > 17.0)
+        printf("まあまあ\n");
+    else
+        printf("速い\n");
 
     return 0;
 }
