@@ -32,7 +32,7 @@ int main(void){
     }
     time_t end = time(NULL);
     double jikan = difftime(end, start);
-    printf(".1f秒かかりました\n", jikan);
+    printf("%.1f秒かかりました\n", jikan);
     if (jikan > 25.0)
         printf("遅い\n");
     else if (jikan > 20.0)
