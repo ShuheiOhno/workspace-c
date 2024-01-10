@@ -19,16 +19,16 @@
 
     //ライブラリの初期処理
     static void init_getpuch(void){
-        initscr();
-        refresh();
+        initscr(); //スクリーンを作成してライブラリを初期化する。Cursesライブラリの利用時に最初に呼び出さなくてはならない
+        refresh(); //画面を更新する
     }
     //ライブラリ終了処理
     static void term_getputch(void){
-        endwin();
+        endwin(); //ライブラリの後始末用の関数で、Cursesライブラリの利用時に最後に呼び出さなければならない。
     }
     // putch: 1文字表示
     static int putch(int ch){
-        int result = addch(ch) == OK ? ch : EOF;
+        int result = addch(ch) == OK ? ch : EOF; //addchar(ch): 文字chを出力する。出力時にはOKを返却し、失敗時はEOFを返却する
         refresh(); //更新
         return result;
     }
@@ -46,9 +46,10 @@
         va_start(ap, format);
         vsprintf(__buf, format, ap);
         va_end(ap);
-        count = printw("%s", __buf) == OK ? strlen(__buf) : EOF;
+        count = printw("%s", __buf) == OK ? strlen(__buf) : EOF; //printw:書式化を行なった表示をする
         refresh();
         return count;
     } 
 
     // __puts: puts関数の代替え
+    
