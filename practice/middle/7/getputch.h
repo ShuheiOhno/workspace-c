@@ -52,4 +52,28 @@
     } 
 
     // __puts: puts関数の代替え
-    
+    static int __puts(const char *s){
+        //改行文字を付加して出力
+        int count = printw("%s\n", s) == OK ? strlen(s) + 1 : EOF;
+        refresh();
+        return count;
+    }
+
+    // __getch: getch関数のラッパー
+    static int __getch(void){
+        int ch;
+        cbreak(); //行バッファリングを行わないようにする
+        noecho(); //タイプされたキーが画面に表示されないようにする
+        ch = getch();
+        nocbreak();
+        echo();
+        return ch;
+    }
+
+    #define getch __getch
+    #define putchar __putchar
+    #define printf __printf
+    #define puts __puts
+    #define scanf scanw
+    #endif
+#endif
