@@ -4,7 +4,7 @@
 
 double vsum(int sw, ...){
     double sum = 0.0;
-    va_list ap;
+    va_list ap; //関数呼び出し時に積まれた引数をアクセスするための特殊な型
 
     va_start(ap, sw); //可変部引数アクセス開始
 
