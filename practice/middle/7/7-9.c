@@ -6,11 +6,11 @@ double vsum(int sw, ...){
     double sum = 0.0;
     va_list ap; //関数呼び出し時に積まれた引数をアクセスするための特殊な型
 
-    va_start(ap, sw); //可変部引数アクセス開始
+    va_start(ap, sw); //可変部引数アクセス開始(va_argおよびva_endの呼び出しに備えてapを初期化する)
 
     switch (sw) {
     // int型の第二引数とint型の第三引数を加算
-    case 0: sum += va_arg(ap, int); // vsum(0,int,int)
+    case 0: sum += va_arg(ap, int); // vsum(0,int,int) 可変個部の引数を一つずつ取り出す
             sum += va_arg(ap, int);
         break;
     // int型の第二引数とlong型の第三引数を加算
