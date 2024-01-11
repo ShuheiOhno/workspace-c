@@ -9,12 +9,15 @@ double vsum(int sw, ...){
     va_start(ap, sw); //可変部引数アクセス開始
 
     switch (sw) {
+    // int型の第二引数とint型の第三引数を加算
     case 0: sum += va_arg(ap, int); // vsum(0,int,int)
             sum += va_arg(ap, int);
         break;
+    // int型の第二引数とlong型の第三引数を加算
     case 1: sum += va_arg(ap, int); // vsum(1,int,long)
             sum += va_arg(ap, long);
             break;
+    // int型の第二引数とlong型の第三引数とdouble型の第四引数を加算
     case 2: sum += va_arg(ap, int); // vsum(2,int,long,double)
             sum += va_arg(ap, long);
             sum += va_arg(ap, double);
