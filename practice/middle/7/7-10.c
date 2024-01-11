@@ -6,7 +6,7 @@ int aleart_printf(const char *format, ...){
     va_list ap;
     putchar('\a');
     va_start(ap, format);
-    int count = vprintf(format, ap); //可変個引数の処理をvprintfに一任
+    int count = vprintf(format, ap); //可変個引数の処理をvprintfに一任 vprintfの引数は可変個引数ではない
     va_end(ap);
     return count;
 }
