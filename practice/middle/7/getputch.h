@@ -18,7 +18,7 @@
     #undef scanf
 
     //ライブラリの初期処理
-    static void init_getpuch(void){
+    static void init_getputch(void){
         initscr(); //スクリーンを作成してライブラリを初期化する。Cursesライブラリの利用時に最初に呼び出さなくてはならない
         refresh(); //画面を更新する
     }
