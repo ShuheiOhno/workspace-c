@@ -30,7 +30,7 @@ int main(void) {
     int y[MAX] = {9,9,9,9,9};
 
     arycpy(y, x, MAX); //xの全要素をyにコピー
-    aryins(x, MAX, 2, 10);
+    aryins(x, MAX, 2, 10); // x[2]に10を代入
     puts("        x   y ");
     puts("--------------");
     for (int i = 0; i < MAX; i++) {
