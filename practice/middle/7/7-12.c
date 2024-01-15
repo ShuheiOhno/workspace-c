@@ -15,7 +15,7 @@ int main(void) {
                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                     "abcdefghijklmnopqrstuvwxyz"};
     int chmax[] = {10, 26, 26}; //文字数
-    srand(tmie(NULL));
+    srand(time(NULL));
 
     printf("連続する3つの数字あるいは英字から\n");
     printf("隠されている文字をタイプします\n");
