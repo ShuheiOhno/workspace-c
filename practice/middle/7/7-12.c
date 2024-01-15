@@ -8,7 +8,7 @@
 #include "getputch.h"
 
 #define MAX_STAGE 5
-#define swap(type, x, y) do { type t = x, x = y; y = t };
+#define swap(type, x, y) do { type t = x, x = y; y = t; } while(0)
 
 int main(void) {
     char *qstr[] = {"0123456789",
