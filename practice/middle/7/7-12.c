@@ -30,8 +30,44 @@ int main(void) {
 
     for (int stage = 0; stage < MAX_STAGE; stage++) {
         int qtype = rand() % 3; //0:数字、1:英大文字,2:英小文字
+        int nhead = rand() % (chmax[qtype] - 2); //先頭文字の添字
+        int x = rand() % 3; //3文字のどれを？にするか
+
+        putchar('\r');
+        for (int i = 0; i < 3; i++) {
+            if(i != 0)
+                printf(" %c", qstr[qtype][nhead + 1]);
+            else
+                printf(" ?");
+        }
+        printf(" : ");
+        fflush(stdout);
+
+        int key;
+
+        do {
+            key = getch();
+            if (isprint(key)) { //表示可能であるか
+                putch(key); //押下されたキーを表示
+                if(key != qstr[qtype][nhead + x]) //正解かどうか判定
+                    putchar('\b'); //カーソルを1つ戻す
+            }
+        } while (key != qstr[qtype][nhead + x]);
+        printf("\n");
     }
-    
 
+    time_t end = time(NULL);
+    double jikan = difftime(end, start);
+    printf("\n秒かかりました\n", jikan);
 
+    if (jikan > 50.0)
+        printf("遅い\n");
+    else if (jikan > 40.0)
+        printf("少し遅い\n");
+    else if (jikan > 34.0)
+        printf("まあまあ\n");
+    else
+        printf("速い\n");
+
+    return 0;
 }
