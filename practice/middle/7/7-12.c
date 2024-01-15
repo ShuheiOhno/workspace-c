@@ -15,12 +15,14 @@ int main(void) {
                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                     "abcdefghijklmnopqrstuvwxyz"};
     int chmax[] = {10, 26, 26}; //文字数
+
+    init_getputch();
     srand(time(NULL));
 
     printf("連続する3つの数字あるいは英字から\n");
     printf("隠されている文字をタイプします\n");
     printf("例えば、A?B:と表示されたらBを\n");
-    printf("　　　　4?5と表示されたら6を\n");
+    printf("4?5と表示されたら6を\n");
     printf("タイプします\n");
     printf("スペースキーで開始します\n");
 
