@@ -10,12 +10,12 @@ OBJ = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRC))
 TARGET = myprogram
 
 $(TARGET): $(OBJ)
-    $(CC) -o $@ $^
+	$(CC) -o $@ $^
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-    $(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 .PHONY: clean
 
 clean:
-    rm -f $(OBJDIR)/*.o $(TARGET)
+	rm -f $(OBJDIR)/*.o $(TARGET)
