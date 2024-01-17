@@ -10,6 +10,7 @@ int main(void) {
     printf("nの値=%d\n", n);
     printf("&nの値=%p\n", &n);
     printf("ptrの値=%p\n", ptr);
+    printf("ptrの値=%d\n", *ptr);
 
     return 0;
 }
