@@ -6,11 +6,11 @@ int main(void) {
     char s[20];
 
     printf("整数nを入力せよ:");
-    scanf("%d", n);
+    scanf("%d", &n);
     printf("整数kを入力せよ:");
-    scanf("%ld", k);
+    scanf("%ld", &k);
     printf("文字列sを入力せよ:");
-    scanf("%s", s);
+    scanf("%s", &s);
 
     printf("n:%d\n", n);
     printf("l:%ld\n", k);
