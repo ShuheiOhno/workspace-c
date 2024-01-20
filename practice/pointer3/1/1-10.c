@@ -15,8 +15,8 @@ int main(void) {
     swap(a, b); //変わりそうで変わらない
 
     puts("整数AとBの値を交換しました\n");
-    printf("Aの値は%dです\n", a);
-    printf("Bの値は%dです\n", b);
+    printf("Aの値は%dです\n", a); //誤り
+    printf("Bの値は%dです\n", b); //誤り
 
     return 0;
 }
