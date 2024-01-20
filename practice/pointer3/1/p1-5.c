@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 void sum_diff(int x, int y, int *wa, int *sa) {
-    wa = x + y;
+    *wa = x + y;
     if (x <= y)
-        sa = y - x;
+        *sa = y - x;
     else
-        sa = x - y;
+        *sa = x - y;
 }
 
 int main(void) {
