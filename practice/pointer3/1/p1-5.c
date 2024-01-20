@@ -14,7 +14,7 @@ int main(void) {
     int *diff;
     printf("整数aを入力:"); scanf("%d", &a);
     printf("整数bを入力:"); scanf("%d", &b);
-    sum_diff(sum, diff);
+    sum_diff(a, b, sum, diff);
     printf("aとbの和%d", *sum);
     printf("aとbの差%d", *diff);
     return 0;
