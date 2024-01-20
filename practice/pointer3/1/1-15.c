@@ -4,7 +4,7 @@ void scan2double(double *x, double *y) {
     printf("1番目:"); scanf("%lf", x);
     do {
         printf("2番目:"); scanf("%lf", y);
-    } while(*x > *y)
+    } while(*x > *y);
 }
 
 int main(void) {
