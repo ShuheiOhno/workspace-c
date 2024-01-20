@@ -10,12 +10,13 @@ void sum_diff(int x, int y, int *wa, int *sa) {
 
 int main(void) {
     int a, b;
-    int *sum;
-    int *diff;
+    // int *sum;
+    // int *diff;
+    int sum, diff; //まずはメモリ領域を用意する
     printf("整数aを入力:"); scanf("%d", &a);
     printf("整数bを入力:"); scanf("%d", &b);
-    sum_diff(a, b, sum, diff);
-    printf("aとbの和%d", *sum);
-    printf("aとbの差%d", *diff);
+    sum_diff(a, b, &sum, &diff);
+    printf("aとbの和%d\n", sum);
+    printf("aとbの差%d\n", diff);
     return 0;
 }
