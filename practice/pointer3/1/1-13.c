@@ -10,7 +10,7 @@ int main(void) {
     printf("整数kを入力せよ:");
     scanf("%ld", &k);
     printf("文字列sを入力せよ:");
-    scanf("%s", &s);
+    scanf("%s", s); //&sではない
 
     printf("n:%d\n", n);
     printf("l:%ld\n", k);
