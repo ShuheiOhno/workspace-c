@@ -6,6 +6,9 @@ void ary_cpy(int a[], const int b[], int n) {
         *a = b[i];
         a++;
     }
+    // for (int i = 0; i < n; i++) {
+    //     a[i] = b[i];
+    // }
 }
 
 int main(void) {
