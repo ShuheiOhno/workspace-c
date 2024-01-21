@@ -9,7 +9,7 @@ int main(void) {
         printf("a[%d]=%d *(a+%d)=%d p[%d]=%d *(p+%d)=%d\n",
                 i, a[i], i, *(a+i), i, p[i], i, *(p+i));
     for (i = 0; i < 5; i++)
-        printf("&a[%d]=%p a+%d=%d &p[%d]=%p p+%d=%p\n",
+        printf("&a[%d]=%p a+%d=%p &p[%d]=%p p+%d=%p\n",
                 i, &a[i], i, a+i, i, &p[i], i, p+i);
                 
     return 0;
