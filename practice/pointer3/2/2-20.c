@@ -20,7 +20,10 @@ int main(void) {
     print(p, 3);
 
     //実験
-    int *arr = {&c, &a, &b};
+    printf("-----------\n");
+    int a1 = 5, b1 = 3, c1 = 7;
+    // int *arr = {&c, &a, &b};  失敗
+    int *arr[3] = {&c1, &a1, &b1};
     print(arr, 3);
     return 0;
 }
