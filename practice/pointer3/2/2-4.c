@@ -10,7 +10,7 @@ int main(void) {
                 i, a[i], i, *(a+i), i, p[i], i, *(p+i));
     for (i = 0; i < 5; i++)
         printf("&a[%d]=%p a+%d=%d &p[%d]=%p p+%d=%p\n",
-                i, &a[i], i, a+i, i, &p[i], i, *(p+i));
+                i, &a[i], i, a+i, i, &p[i], i, p+i);
                 
     return 0;
 }
