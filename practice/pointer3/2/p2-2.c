@@ -15,8 +15,8 @@ int main(void) {
     ary_cpy(x, y, size);
 
     for (int i = 0; i < size; i++)
-        printf("x[%d]=%d", i, x[i]);
+        printf("x[%d]=%d\n", i, x[i]);
     for (int i = 0; i < size; i++)
-        printf("y[%d]=%d", i, y[i]);
+        printf("y[%d]=%d\n", i, y[i]);
     return 0;
 }
