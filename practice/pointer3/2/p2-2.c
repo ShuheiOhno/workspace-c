@@ -4,8 +4,7 @@
 void ary_cpy(int a[], const int b[], int n) {
     for (int i = 0; i < n; i++) {
         *a = b[i];
-        *a++
-
+        a++;
     }
 }
 
