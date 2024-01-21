@@ -6,6 +6,6 @@ int main(void) {
     int *p = a;
 
     for (i = 0; i < 5; i++)
-        printf("&a[%d]=%p p+%d=%p\n", i, &a[i], i, p + i);
+        printf("&a[%d]=%p p+%d=%p p=%p\n", i, &a[i], i, p + i, p);
     return 0;
 }
