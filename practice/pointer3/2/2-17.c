@@ -1,9 +1,19 @@
 #include <stdio.h>
 
+// int seq_search(int *a, int n, int key) {
+//     for (int i = 0; i < n; i++)
+//         if(*a++ == key)
+//             return i;
+//     return -1;
+// }
 int seq_search(int *a, int n, int key) {
-    for (int i = 0; i < n; i++)
-        if(*a++ == key)
-            return i;
+    int *p = a;
+    while (n-- > 0) {
+        if (*p == key)
+            return p - a;
+        else
+            *p++;
+    }
     return -1;
 }
 
