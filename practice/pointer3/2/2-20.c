@@ -12,10 +12,15 @@ int main(void) {
     p[0] = &a;
     p[1] = &b;
     p[2] = &c;
+    
     printf("&a=%p a=%d\n", &a, a);
     printf("&b=%p b=%d\n", &b, b);
     printf("&c=%p c=%d\n", &c, c);
-    
+
     print(p, 3);
+
+    //実験
+    int *arr = {&c, &a, &b};
+    print(arr, 3);
     return 0;
 }
