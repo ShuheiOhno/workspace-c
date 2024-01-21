@@ -3,7 +3,7 @@
 // bをaにコピー。要素数はn
 void ary_cpy(int a[], const int b[], int n) {
     for (int i = 0; i < n; i++) {
-        *a = b;
+        *a = b[i];
     }
 }
 
