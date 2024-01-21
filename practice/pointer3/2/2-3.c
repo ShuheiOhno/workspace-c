@@ -6,6 +6,7 @@ int main(void) {
     int *p = a;
 
     for (i = 0; i < 5; i++)
+        //ポインタp+iがa[i]を指す
         printf("&a[%d]=%p p+%d=%p p=%p\n", i, &a[i], i, p + i, p);
     return 0;
 }
