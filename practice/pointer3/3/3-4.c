@@ -1,11 +1,18 @@
 #include <stdio.h>
 
+// void fill(int (*a)[3], int n, int v) {
+//     for (int i = 0; i < n; i++)
+//         for (int j = 0; j < v; j++)
+//             a[i][j] = v;
+// }
+
 void fill(int (*a)[3], int n, int v) {
-    int i, j;
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < v; j++)
-            a[i][j] = v;
-}
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 3; j++)
+            (*a)[j] = v;
+        a++;
+    }
+} 
 
 int main(void) {
     int no;
