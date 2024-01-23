@@ -17,18 +17,20 @@ int main(void) {
     fill(y, 4, no);
 
     puts("---x---");
-    for(int i = 0; i < 2; i++)
+    for(int i = 0; i < 2; i++) {
         for(int j = 0; j < 3; j++) {
                 printf("%3d", x[i][j]);
             putchar('\n');
         }
+    }
 
     puts("---y---");
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 4; i++) {
         for(int j = 0; j < 3; j++) {
                 printf("%3d", y[i][j]);
             putchar('\n');
         }
+    }
     return 0;
 }
 
