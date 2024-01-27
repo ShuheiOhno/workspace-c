@@ -5,7 +5,7 @@
 //     while((d[i] = s[i]) != '\0')
 //         i++;
 // }
-char str_copy(char d[], const char s[]) {
+char str_copy(char *d, const char *s) {
     char *p = d;
     while(*d++ = *s++);
     return p;
@@ -21,6 +21,8 @@ int main(void) {
 
     str_copy(str, tmp);
     printf("str:%s\n", str);
+    // printf("str:%p\n", str);
+    // printf("str:%s\n", *str);
 
     return 0;
 }
