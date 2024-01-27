@@ -6,11 +6,15 @@ void swap(char x[], char y[]) {
     while (x[len_x] != '\0') {
         len_x++;
     }
+    // size_t len_x = sizeof(x) / sizeof(x[0]);
+    // printf("%zu\n", len_x);
 
     size_t len_y = 0;
     while (y[len_y] != '\0') {
         len_y++;
     }
+    // size_t len_y = sizeof(y) / sizeof(y[0]);
+    // printf("%zu\n", len_y);
 
     // 短い方の文字列の長さを取得
     size_t len = len_x < len_y ? len_x : len_y;
