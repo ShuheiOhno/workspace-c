@@ -2,7 +2,7 @@
 
 void str_copy(char d[], const char s[]) {
     int i = 0;
-    while((d[i] == s[i]) != '\0')
+    while((d[i] = s[i]) != '\0')
         i++;
 }
 
