@@ -7,8 +7,8 @@ void swap(char **x, char **y) {
 }
 
 int main(void) {
-    char s1 = "ABC";
-    char s2 = "DEF";
+    char *s1 = "ABC";
+    char *s2 = "DEF";
 
     printf("文字列s1は%sです\n", s1);
     printf("文字列s2は%sです\n", s2);
