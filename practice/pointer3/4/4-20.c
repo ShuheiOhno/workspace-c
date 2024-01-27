@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void swap(char **x, char **y) {
+void swap(char **x, char **y) { //ポインタのポインタを入れ替えるので、**
     char **temp = *x;
     *x = *y;
     *y = temp;
@@ -13,7 +13,7 @@ int main(void) {
     printf("文字列s1は%sです\n", s1);
     printf("文字列s2は%sです\n", s2);
 
-    swap(&s1, &s2);
+    swap(&s1, &s2); //先頭のポインタのポインタ
 
     puts("ポインタs1とs2を交換");
 
