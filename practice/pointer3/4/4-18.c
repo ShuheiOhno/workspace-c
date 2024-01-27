@@ -1,9 +1,14 @@
 #include <stdio.h>
 
-void str_copy(char d[], const char s[]) {
-    int i = 0;
-    while((d[i] = s[i]) != '\0')
-        i++;
+// void str_copy(char d[], const char s[]) {
+//     int i = 0;
+//     while((d[i] = s[i]) != '\0')
+//         i++;
+// }
+char str_copy(char d[], const char s[]) {
+    char *p = d;
+    while(*d++ = *s++);
+    return p;
 }
 
 int main(void) {
