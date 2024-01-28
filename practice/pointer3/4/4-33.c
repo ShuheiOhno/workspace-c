@@ -9,7 +9,7 @@ int main(void) {
 
     while(1) {
         printf("\n文字列st: ");
-        scanf("s", st);
+        scanf("%s", st);
 
         if(strcmp(st, "XXXXX") == 0)
             break;
