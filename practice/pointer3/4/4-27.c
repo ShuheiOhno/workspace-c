@@ -17,7 +17,7 @@ int main(void) {
     strcpy(s3, x); strncpy(s3, "12345", 3); printf("s3=%s\n", s3);
     strcpy(s3, x); strncpy(s3, "12345", 5); printf("s3=%s\n", s3);
     strcpy(s3, x); strncpy(s3, "12345", 7); printf("s3=%s\n", s3);
-    strcpy(s3, x); strncpy(s3, "1234567890", 3); printf("s3=%s\n", s3);
+    strcpy(s3, x); strncpy(s3, "1234567890", 9); printf("s3=%s\n", s3);
 
     return 0;
 }
