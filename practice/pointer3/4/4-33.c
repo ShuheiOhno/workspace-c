@@ -14,7 +14,7 @@ int main(void) {
         if(strcmp(st, "XXXXX") == 0)
             break;
         printf("strcmp(\"ABCDE\", st) = %d\n", strcmp("ABCDE", st));
-        printf("strncmp(\"ABCDE\", st, 3) = %d\n", strcmp("ABCDE", st, 3));
+        printf("strncmp(\"ABCDE\", st, 3) = %d\n", strncmp("ABCDE", st, 3));
     }
 
     return 0;
