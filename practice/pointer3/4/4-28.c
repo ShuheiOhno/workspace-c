@@ -10,6 +10,11 @@ int main(void) {
     strcat(s, "RRR"); // QQQRRR
     printf("s=%s\n", s);
     
-    
+    strcpy(s,x); strncat(s, "123", 1); printf("s=%s\n",s);
+    strcpy(s,x); strncat(s, "123", 3); printf("s=%s\n",s);
+    strcpy(s,x); strncat(s, "123", 5); printf("s=%s\n",s);
+    strcpy(s,x); strncat(s, "12345", 5); printf("s=%s\n",s);
+    strcpy(s,x); strncat(s, "123456789", 5); printf("s=%s\n",s);
+
     return 0;
 }
