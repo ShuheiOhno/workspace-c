@@ -17,7 +17,7 @@ int main(void) {
         int ofs = p - s1;
         printf("\n%s\n", s1);
         printf("%*s/\n", ofs, "");
-        printf("%s*s%s\n", ofs, "", s2);
+        printf("%*s%s\n", ofs, "", s2);
     }
     return 0;
 }
