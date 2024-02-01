@@ -5,6 +5,7 @@
 int main(void) {
     char str[128]; //分解する文字列
     char sep[] = ".,;"; //この文字で分解
+    char *p;
 
     printf("文字列を入力してください:");
     scanf("%s", str);
