@@ -4,7 +4,7 @@
 #include <string.h>
 
 //pを先頭としてnバイトの記憶域の内容を16進数で表示
-int put_bin(const char *p, size_t n) {
+void put_bin(const char *p, size_t n) {
     size_t i;
     for (i = 0; i < n; i++)
         printf("%02X ", (unsigned char)p[i]);
