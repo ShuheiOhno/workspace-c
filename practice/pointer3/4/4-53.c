@@ -29,7 +29,7 @@ int main(void) {
     int y[MAX] = {5,5,5,5,5};
     arycpy(y, x, MAX);
     aryins(x, MAX, 2, 10);
-    puts("      x    y ");
+    puts("        x   y");
     puts("-------------");
     for (int i = 0; i < MAX; i++)
         printf("[%d] :%4d%4d\n", i, x[i], y[i]);
