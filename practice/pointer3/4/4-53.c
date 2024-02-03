@@ -27,8 +27,14 @@ int aryins(int a[], int n, int idx, int x) {
 int main(void) {
     int x[MAX] = {1,2,3,4,5};
     int y[MAX] = {5,5,5,5,5};
+    for (int i = 0; i < MAX; i++)
+        printf("[%d] :%4d%4d\n", i, x[i], y[i]);
+    puts("-------------");
     arycpy(y, x, MAX);
-    aryins(x, MAX, 2, 10);
+    for (int i = 0; i < MAX; i++)
+        printf("[%d] :%4d%4d\n", i, x[i], y[i]);
+    puts("-------------");
+    aryins(x, MAX, 2, 10); //x[2]に10を代入
     puts("        x   y");
     puts("-------------");
     for (int i = 0; i < MAX; i++)
