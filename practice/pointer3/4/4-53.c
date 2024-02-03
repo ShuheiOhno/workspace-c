@@ -7,6 +7,7 @@ int arycpy(int a[], const int b[], int n) {
         return 1;
     else {
         memcpy(a, b, n * sizeof(int));
+        return 0;
     }
 }
 
