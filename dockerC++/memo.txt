@@ -1,2 +1,2 @@
 立ち上げ方
-docker container exec -it cppdev /bin/sh
+docker container exec -it cppdev /bin/bash
